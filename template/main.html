@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+      <title>Дискус Клуб, статьи о дискусах, аквариум для дискусов, форум о дискусах, фото дискусов.</title>
+      <meta content="Дискус Клуб Йошкар-Ола, интересные статьи о дискусах, аквариум своими руками, форум о дискусах, галлерии с дискусами, мебель для аквариума. " name="description" />
+      <meta content="аквариум для дискусов, разведение дискусов, фарш для рыбы, купить дискусов, продажа дискусов, discus, дискус, дискуса, дискусов, дискусы продажа, аквариум с дискусами, фото дискусы, рыбы дискусы, дискус форум, дискусы разведение, грунт для аквариума, запуск аквариума, герметик для аквариума, аквариум своими руками" name="keywords" />
+      <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+      <style type="text/css">
+         <!--
+            .style4 {font-size: 14px}
+            -->
+      </style>
+      <link href="{% static 'images/favicon.ico' %}" rel="”icon”" type="”image/x-icon”" />
+      <link href="{% static 'images/favicon.ico' %}" rel="”shortcut" type="”image/x-icon”" />
+   </head>
+   <body>
+      <div class="bg-x">
+         <div id="m-c">
+            <div id="main">
+
+               {% block content %}
+               {% endblock %}
+
+            </div>
+            <div class="clear"></div>
+            <div id="main">
+            </div>
+            <div class="clear"></div>
+            <div id="footer">
+               <div class="foot">
+                  <div class="copyr">
+                     <p>
+                        <!--Копирайты-->Авторское право 2010 - 2021 год. Используйте материалы сайта с сылкой на источник. <a href="{% url 'index' %}">www.Discus12.ru</a> <!--//Копирайты-->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="header">
+            <div id="head">
+               <div id="logo">
+                  <!--Логотип--><a href="{% url 'index' %}"><img alt="2" border="0" src="{% static 'images/logo.png' %}" /></a> <!--//Логотип-->
+               </div>
+               <!--Верхнее меню-->
+               <div class="menu">
+                  <ul>
+                     <li><a href="{% url 'index' %}">Главная</a></li>
+                     <li><a href="{% url 'about' %}">Обо мне</a></li>
+                     <li><a href="{% url 'articles' %}">Статьи</a></li>
+                  </ul>
+               </div>
+               <a class="feedback" href="{% url 'fotoreport' %}">Фотоотчет</a>
+               <a class="feedback2" href="{% url 'mapsite' %}">Карта сайта</a>
+               <!--//Верхнее меню-->
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
